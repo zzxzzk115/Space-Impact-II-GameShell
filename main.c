@@ -13,6 +13,7 @@
 #define MENU_SCREEN_MAIN -1
 #define MENU_SCREEN_HIGH_SCORE -2
 #define MENU_SCREEN_PAUSE -3
+#define PAUSE
 
 /** Képkockafrissítõ funkció **/
 Uint32 FrameUpdate(Uint32 ms, void *param) {
