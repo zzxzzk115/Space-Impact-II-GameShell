@@ -1,5 +1,7 @@
 #include "saves.h"
 
+#include "util.h"
+
 /** Beolvassa a mentett szintet, ha az el lett mentve **/
 void ReadSavedLevel(Uint8 *Level) {
     FILE *f = fopen("saved_level.txt", "rt"); /* Fájl megnyitása olvasásra */
@@ -54,7 +56,7 @@ void PlaceTopScore(unsigned int *Arr, Uint16 Entry) {
 /** Fájlnév hozzáfűzése egy elérési úthoz azonosító alapján **/
 void FillFileName(char* Path, Uint16 FileID) {
     char Number[6]; /* Szövegként az azonosító, 100000 csak nem lesz */
-    itoa(FileID, Number, 10); /* Számból szöveg készítése */
+    my_itoa(FileID, Number); /* Számból szöveg készítése */
     strcat(Path, Number); /* Fájlnév hozzáfűzése az elérési úthoz */
     strcat(Path, ".dat"); /* Kiterjesztés hozzáfűzése az elérési úthoz */
 }

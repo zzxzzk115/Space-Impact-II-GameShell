@@ -4,7 +4,7 @@
 /** Grafika **/
 #define BACKLIGHT 178, 189, 8 /* Háttérszín RGB kódja */
 #define FRAMERATE 20 /* Képkocka / másodperc, az eredeti 18, de az nem osztója a 60-nak, így pulldown-t okoz */
-#define UPSCALE_FACTOR 14 /* Hányszorosára növelje a 84x48-as kijelzõt, 14 ajánlott HD-re, 21 Full HD-re */
+#define UPSCALE_FACTOR 3 /* Hányszorosára növelje a 84x48-as kijelzõt, Gameshell 320*240 here is 84*3 x 48*3 */
 
 /** Hang **/
 #define SAMPLE_RATE 44100 /* Mintavételezési frekvencia, módosításakor ajánlott a lövéshangot újrakalibrálni egy másik, az algoritmus számára torz frekvenciára */

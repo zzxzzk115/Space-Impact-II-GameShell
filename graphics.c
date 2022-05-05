@@ -231,7 +231,7 @@ void FreeDynamicGraphics() {
 }
 
 /** Visszaad egy új vektort, hogy el lehessen kerülni a pedantic "ISO C90 forbids compound literals" figyelmeztetését **/
-inline Vec2 NewVec2(Sint16 x, Sint16 y) {
+Vec2 NewVec2(Sint16 x, Sint16 y) {
     Vec2 ret;
     ret.x = x;
     ret.y = y;
@@ -239,7 +239,7 @@ inline Vec2 NewVec2(Sint16 x, Sint16 y) {
 }
 
 /** Visszaad egy új objektumot, hogy el lehessen kerülni a pedantic "ISO C90 forbids compound literals" figyelmeztetését **/
-inline Object NewObject(Vec2 Size, Uint8* Samples) {
+Object NewObject(Vec2 Size, Uint8* Samples) {
     Object ret;
     ret.Size = Size;
     ret.Samples = Samples;

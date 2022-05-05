@@ -8,6 +8,7 @@
 #include "shotlist.h"
 #include "audio.h"
 #include "font.h"
+#include "util.h"
 
 #define MENU_SCREEN_MAIN -1
 #define MENU_SCREEN_HIGH_SCORE -2
@@ -177,9 +178,8 @@ int main(int argc, char *argv[]) {
                     case SDLK_DOWN: PlayerDown = 1; break;
                     case SDLK_LEFT: PlayerLeft = 1; break;
                     case SDLK_RIGHT: PlayerRight = 1; break;
-                    case SDLK_SPACE: PlayerShooting = 1; break; /* Space: tûz */
-                    case SDLK_LCTRL: /* Bal és jobb Ctrl: bónuszfegyver használata */
-                    case SDLK_RCTRL:
+                    case SDLK_j: PlayerShooting = 1; break; /* Space: tûz */
+                    case SDLK_k:
                         if (Player.Bonus) { /* Csak ha van még bónuszból */
                             /* Bónuszlövedék a játékos orrától: fal esetén a pálya tetején kezdődjön, sugár esetén lógjon bele a játékos orrába */
                             AddShot(&Shots, NewVec2(Player.Pos.x + 9, Player.Weapon == Wall ? 5 : Player.Pos.y + 2), Player.Weapon == Beam ? 0 : 2, 1, Player.Weapon);
@@ -231,7 +231,7 @@ int main(int argc, char *argv[]) {
             /** Játék vége képernyõ **/
             } else if (Level == LevelCount) {
                 char ScoreText[6]; /* Maximum ötjegyű lehet + lezáró karakter */
-                itoa(Player.Score, ScoreText, 10); /* Pontszám szöveggé alakítása */
+                my_itoa(Player.Score, ScoreText); /* Pontszám szöveggé alakítása */
                 DrawText(PixelMap, "Game over\nYour score:", NewVec2(1, 1), 9);
                 DrawText(PixelMap, ScoreText, NewVec2(1, 19), 0);
             #ifdef PAUSE
@@ -255,7 +255,7 @@ int main(int argc, char *argv[]) {
                 #ifdef LEGACY_TOP_SCORE
                 const Uint8 OneSign[24] = {0,0,1,0,0,1,1,0,1,1,1,0,0,1,1,0,0,1,1,0,1,1,1,1}; /* Egy egyes pixeltérképe */
                 char ScoreText[6]; /* Maximum ötjegyű lehet + lezáró karakter */
-                itoa(TopScores[0], ScoreText, 10); /* Pontszám szöveggé alakítása */
+                my_itoa(TopScores[0], ScoreText); /* Pontszám szöveggé alakítása */
                 DrawText(PixelMap, "Top score:", NewVec2(1, 1), 0);
                 DrawText(PixelMap, ScoreText, NewVec2(1, 11), 0); /* A rögzített legjobb pontszám kiírása */
                 for (i = 0; i < 4; ++i) { /* Az egyes oszlopai */

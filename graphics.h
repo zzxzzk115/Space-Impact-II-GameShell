@@ -15,7 +15,7 @@ void UncompressPixelMap(Uint8*, Uint16, Uint16);
 void UncompressObjects();
 Object GetObject(Uint16);
 void FreeDynamicGraphics();
-inline Vec2 NewVec2(Sint16, Sint16);
-inline Object NewObject(Vec2, Uint8*);
+Vec2 NewVec2(Sint16, Sint16);
+Object NewObject(Vec2, Uint8*);
 
 #endif /* GRAPHICS_H */
