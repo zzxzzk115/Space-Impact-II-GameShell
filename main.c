@@ -179,8 +179,8 @@ int main(int argc, char *argv[]) {
                     case SDLK_DOWN: PlayerDown = 1; break;
                     case SDLK_LEFT: PlayerLeft = 1; break;
                     case SDLK_RIGHT: PlayerRight = 1; break;
-                    case SDLK_j: PlayerShooting = 1; break; /* Space: tûz */
-                    case SDLK_k:
+                    case SDLK_k: PlayerShooting = 1; break; /* Space: tûz */
+                    case SDLK_j:
                         if (Player.Bonus) { /* Csak ha van még bónuszból */
                             /* Bónuszlövedék a játékos orrától: fal esetén a pálya tetején kezdődjön, sugár esetén lógjon bele a játékos orrába */
                             AddShot(&Shots, NewVec2(Player.Pos.x + 9, Player.Weapon == Wall ? 5 : Player.Pos.y + 2), Player.Weapon == Beam ? 0 : 2, 1, Player.Weapon);
@@ -213,7 +213,7 @@ int main(int argc, char *argv[]) {
                 PlayerLeft = 0;
             if (e.key.keysym.sym == SDLK_RIGHT)
                 PlayerRight = 0;
-            if (e.key.keysym.sym == SDLK_SPACE)
+            if (e.key.keysym.sym == SDLK_k)
                 PlayerShooting = 0;
             break;
         /** Képkocka összeállítása **/
