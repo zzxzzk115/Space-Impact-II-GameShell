@@ -7,6 +7,7 @@ Pixel-perfect clone of Nokia's Space Impact, one of the biggest classics in mobi
 3. Change diretory to XXXInstall.
 4. `sudo chmod +x install.sh`
 5. `./install.sh`
+6. Refresh GameShell's Menu.
 
 Keymapping:
 
