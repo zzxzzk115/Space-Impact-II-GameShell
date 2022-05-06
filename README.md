@@ -3,10 +3,15 @@ Pixel-perfect clone of Nokia's Space Impact, one of the biggest classics in mobi
 
 ## How to play
 Keymapping:
+
 Menu  -> Escape
+
 A     -> Shooting
+
 B     -> Use props
+
 Start -> Enter
+
 Arrow keys to move.
 
 ## Build
