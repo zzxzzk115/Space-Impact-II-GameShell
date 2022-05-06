@@ -6,7 +6,7 @@ Keymapping:
 
 Menu  -> Escape
 
-A     -> Shooting
+A     -> Shoot
 
 B     -> Use props
 
