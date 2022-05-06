@@ -1,6 +1,14 @@
 # Space-Impact-II-GameShell
 Pixel-perfect clone of Nokia's Space Impact, one of the biggest classics in mobile gaming. Ported to GameShell.
 
+## How to play
+Keymapping:
+Menu  -> Escape
+A     -> Shooting
+B     -> Use props
+Start -> Enter
+Arrow keys to move.
+
 ## Build
 After SSH -> GameShell:
 ```bash
