@@ -2,6 +2,12 @@
 Pixel-perfect clone of Nokia's Space Impact, one of the biggest classics in mobile gaming. Ported to GameShell.
 
 ## How to play
+1. Download the release file, then transfer it to GameShell.
+2. Unzip the release file.
+3. Change diretory to XXXInstall.
+4. `sudo chmod +x install.sh`
+5. `./install.sh`
+
 Keymapping:
 
 Menu  -> Escape
